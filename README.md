@@ -6,7 +6,11 @@ A service locator framework for MATLAB.
 Overview
 --------
 
-Muice (pronounced 'moose') is based on the ideas and concepts found in Google Guice <https://code.google.com/p/google-guice/>. If you squint at it sideways you can call it dependency injection, but it's more accurately a service locator framework.
+Muice (pronounced 'moose') is based on the ideas and concepts found in [Google Guice] (https://code.google.com/p/google-guice/). I wanted the same thing for MATLAB code: modular pieces that can be swapped in and out without disturbing their surroundings. 
+
+Matlab doesn't have annotations like Java does. But what it does have is function handles. So I built a framework using those. It's _technically_ not dependency injection, because the function has to be aware of Muice to make use of it. Muice is more accurately a Service Locator.
+
+The end result is the same though. After a bit of extra work upfront, you can swap out what the implementations of your functions/classes, even built-in functions!
 
 Installation
 ------------
